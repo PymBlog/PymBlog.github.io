@@ -1,0 +1,198 @@
+---
+---
+
+@import "minima";
+
+// Dark mode
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #e0e0e0;
+    --background-color: #1a1a2e;
+    --brand-color: #5b9bf5;
+    --grey-color: #a0a0a0;
+    --grey-color-light: #2a2a3e;
+    --grey-color-dark: #c0c0c0;
+  }
+
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+
+  .site-header {
+    border-top-color: var(--grey-color-dark);
+    border-bottom-color: var(--grey-color-light);
+  }
+
+  .site-title,
+  .site-title:visited {
+    color: var(--grey-color-dark);
+  }
+
+  a {
+    color: var(--brand-color);
+  }
+
+  .page-content,
+  .post-content {
+    a {
+      color: var(--brand-color);
+
+      &:hover {
+        color: var(--text-color);
+      }
+    }
+  }
+
+  .post-list {
+    li {
+      border-bottom-color: var(--grey-color-light);
+    }
+  }
+
+  .site-footer {
+    border-top-color: var(--grey-color-light);
+  }
+
+  .footer-heading {
+    color: var(--text-color);
+  }
+
+  .contact-list a,
+  .social-media-list a {
+    color: var(--grey-color);
+
+    &:hover {
+      color: var(--text-color);
+    }
+  }
+
+  .social-media-list a[data-brand="#FF0000"]:hover { color: #FF0000; }
+  .social-media-list a[data-brand="#000000"]:hover { color: #ffffff; }
+  .social-media-list a[data-brand="#1877F2"]:hover { color: #1877F2; }
+  .social-media-list a[data-brand="#E4405F"]:hover { color: #E4405F; }
+  .social-media-list a[data-brand="#5865F2"]:hover { color: #5865F2; }
+  .social-media-list a[data-brand="#25D366"]:hover { color: #25D366; }
+  .social-media-list a[data-brand="#12B7F5"]:hover { color: #12B7F5; }
+  .social-media-list a[data-brand="#07C160"]:hover { color: #07C160; }
+  .social-media-list a[data-brand="#00A1D6"]:hover { color: #00A1D6; }
+  .social-media-list a[data-brand="#FFA500"]:hover { color: #FFA500; }
+
+  .highlight {
+    background-color: #2a2a3e;
+  }
+
+  code {
+    background-color: #2a2a3e;
+  }
+
+  .gist {
+    background-color: #2a2a3e;
+  }
+
+  blockquote {
+    border-left-color: var(--brand-color);
+    color: var(--grey-color);
+  }
+
+  .wrapper {
+    color: var(--text-color);
+  }
+}
+
+.site-footer {
+  border-top: 1px solid $grey-color-light;
+  padding: $spacing-unit 0;
+}
+
+.footer-bottom {
+  @include relative-font-size(0.9375);
+  color: $grey-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: $spacing-unit;
+  flex-wrap: wrap;
+}
+
+.footer-info {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-heading {
+  @include relative-font-size(1.125);
+  margin-bottom: $spacing-unit * 0.5;
+}
+
+.contact-list {
+  list-style: none;
+  margin: 0 0 $spacing-unit * 0.5 0;
+  padding: 0;
+}
+
+.footer-desc {
+  margin: 0;
+  color: $grey-color;
+}
+
+.footer-social {
+  flex: 2;
+  min-width: 300px;
+}
+
+.social-media-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px 16px;
+
+  li {
+    margin: 0;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: $grey-color;
+    padding: 4px 0;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: attr(data-brand);
+    }
+  }
+}
+
+.svg-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.social-media-list a[data-brand="#FF0000"]:hover { color: #FF0000; }
+.social-media-list a[data-brand="#000000"]:hover { color: #000000; }
+.social-media-list a[data-brand="#1877F2"]:hover { color: #1877F2; }
+.social-media-list a[data-brand="#E4405F"]:hover { color: #E4405F; }
+.social-media-list a[data-brand="#5865F2"]:hover { color: #5865F2; }
+.social-media-list a[data-brand="#25D366"]:hover { color: #25D366; }
+.social-media-list a[data-brand="#12B7F5"]:hover { color: #12B7F5; }
+.social-media-list a[data-brand="#07C160"]:hover { color: #07C160; }
+.social-media-list a[data-brand="#00A1D6"]:hover { color: #00A1D6; }
+.social-media-list a[data-brand="#FFA500"]:hover { color: #FFA500; }
+
+@include media-query($on-palm) {
+  .footer-bottom {
+    flex-direction: column;
+  }
+
+  .footer-social {
+    min-width: 100%;
+  }
+}
