@@ -59,11 +59,10 @@ tailscale ip -4
 在应用商店搜索 Tailscale 安装：
 
 - **Android**：[Google Play](https://play.google.com/store/apps/details?id=com.tailscale.ipn) / [国内下载](https://tailscale.com/download/android)
-- **iOS**：[App Store](https://apps.apple.com/app/tailscale/id1475387142)
 
 打开 App，用同一个账号登录。登录后手机会自动获得一个 `100.x.x.x` 的 IP。
 
-<!-- ![手机端 Tailscale 登录界面](/assets/images/mobile-tailscale-login.png) -->
+![手机端 Tailscale 登录界面](/assets/images/tailscale-login.jpg)
 
 在 Ubuntu 终端确认手机已加入网络：
 
@@ -83,7 +82,7 @@ Ubuntu 26 自带 GNOME 远程桌面，支持 RDP 协议。
 2. 打开 **远程控制** 开关
 3. 设置用户名和密码（手机连接时要用）
 
-<!-- ![Ubuntu 远程桌面设置界面](/assets/images/ubuntu-rdp-settings.png) -->
+![Ubuntu 远程桌面设置界面](/assets/images/ubuntu-rdp-settings.png)
 
 > **注意**：如果找不到该选项，可能需要安装：
 > ```bash
@@ -92,28 +91,18 @@ Ubuntu 26 自带 GNOME 远程桌面，支持 RDP 协议。
 
 ## 第三步：手机连接
 
-### Android
+推荐使用 [aRDP Free](https://play.google.com/store/apps/details?id=com.iiordanov.ardp)（免费）。
 
-推荐使用 [Microsoft Remote Desktop](https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx)（免费）。
-
-1. 打开 App，点击 **+** 添加连接
-2. **PC 名称** 填 Ubuntu 的 Tailscale IP（`100.x.x.x`）
+1. 打开 App，点击 **新建连接**
+2. **主机** 填 Ubuntu 的 Tailscale IP（`100.x.x.x`）
 3. **用户名** 和 **密码** 填刚才设置的
 4. 保存后点击连接
 
-<!-- ![Android RDP 连接配置](/assets/images/android-rdp-config.png) -->
-
-### iOS
-
-推荐使用 [Microsoft Remote Desktop](https://apps.apple.com/app/microsoft-remote-desktop/id1295110347)（免费）。
-
-操作同 Android：添加 PC → 输入 Tailscale IP → 输入账号密码 → 连接。
-
-<!-- ![iOS RDP 连接配置](/assets/images/ios-rdp-config.png) -->
+![aRDP 连接配置](/assets/images/ardp-config.jpg)
 
 ## 连接成功
 
-<!-- ![手机远程桌面连接成功](/assets/images/remote-desktop-success.png) -->
+![手机远程桌面连接成功](/assets/images/remote-desktop-success.jpg)
 
 现在你可以在手机上操控 Ubuntu 桌面了：
 
