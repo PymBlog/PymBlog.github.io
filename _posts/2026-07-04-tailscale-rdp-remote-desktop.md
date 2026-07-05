@@ -93,6 +93,8 @@ Ubuntu 26 自带 GNOME 远程桌面，支持 RDP 协议。
 
 推荐使用 [aRDP Free](https://play.google.com/store/apps/details?id=com.iiordanov.ardp)（免费）。
 
+> 如果 Google Play 无法下载，本仓库提供了安装包（`aRDP Free_v6.4.4(1).apks`），使用 MT 管理器安装即可。
+
 1. 打开 App，点击 **新建连接**
 2. **主机** 填 Ubuntu 的 Tailscale IP（`100.x.x.x`）
 3. **用户名** 和 **密码** 填刚才设置的
