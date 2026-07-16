@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "在 crDroid + KernelSU Next 上刷入全局自定义字体：一次踩坑实录"
-date: 2026-07-16 20:00:00 +0800
+date: 2026-07-16 15:00:00 +0800
 categories: 教程 Android
 ---
 
